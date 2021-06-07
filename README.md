@@ -8,7 +8,7 @@
 
 ## Live demo
 
-🔗 [visit the page]()
+🔗 [visit the page](https://practical-meitner-6d41ad.netlify.app/)
 
 ## Built With
 

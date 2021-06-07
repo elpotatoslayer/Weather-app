@@ -1,21 +1,24 @@
 export default class UI {
   constractor() {
-    const location = document.getElementById('w-location');
-          desc = document.getElementById('w-description');
-          string = document.getElementById('w-string');
-          details = document.getElementById('w-details');
-          icon = document.getElementById('w-icon');
-          humidity = document.getElementById('w-humidity');
-          feelsLike = document.getElementById('w-feels-like');
-          dewpoint = document.getElementById('w-dewpoint');
-          wind = document.getElementById('w-wind');
+    this.location = document.getElementById('w-location');
+    this.desc = document.getElementById('w-description');
+    this.string = document.getElementById('w-string');
+    this.details = document.getElementById('w-details');
+    this.icon = document.getElementById('w-icon');
+    this.humidity = document.getElementById('w-humidity');
+    this.feelsLike = document.getElementById('w-feels-like');
+    this.dewpoint = document.getElementById('w-dewpoint');
+    this.wind = document.getElementById('w-wind');
+  }
 
-    this.location = location;
-    this.desc = desc;
-    this.string = string;
-    this.details = details;
-    this.icon = icon;
-    this.humidity = humidity;
-    this.feelsLike = this.feelsLike;
+  content(results){
+    this.location.textContent = `${results.name}`;
+    this.desc.textContent = `${results.weather[0].description}`;
+    this.string.textContent = `${results.main.temp}°C || ${weather.main.temp * 1.8 + 32}°F`;
+    this.icon.setAttribute('src', `http://openweathermap.org/img/wn/${results.weather[0].icon}@2x.png`);
+    this.humidity.textContent = `Relative Humidity: ${results.main.humidity}`;
+    this.feelsLike.textContent = `Feels Like: ${results.main.feels_like}`;
+    this.dewpoint.textContent = `Visibility: ${results.visibility}`;
+    this.wind.textContent = `Wind speed: ${results.wind.speed}`;
   }
 }

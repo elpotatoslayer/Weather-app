@@ -1,6 +1,9 @@
 import Weather from './modules/weather'
+import UI from './modules/ui'
 
 const weather = new Weather('london');
+
+const ui = new UI();
 
 const getWeather = () => {
   weather.getweather()

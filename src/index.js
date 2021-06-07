@@ -10,7 +10,18 @@ const getWeather = () => {
     .then((res) => {
       ui.content(res);
     })
-    .catch((err) => err);
+    .catch((err) => {
+      const error = document.querySelector('#error');
+      error.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
+      error.setAttribute('role', 'alert');
+      error.textContent = 'SEARCH FOR A VALID CITY OR COUNTRY';
+      const x = document.createElement('BUTTON');
+      x.setAttribute('type', 'button');
+      x.setAttribute('data-dismiss', 'alert');
+      x.setAttribute('class', 'close');
+      x.innerHTML = '&times;';
+      error.appendChild(x);
+    });
 };
 
 document.addEventListener('DOMContentLoaded', getWeather);

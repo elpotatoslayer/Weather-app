@@ -10,7 +10,7 @@ const getWeather = () => {
     .then((res) => {
       ui.content(res);
     })
-    .catch((err) => {
+    .catch(() => {
       const error = document.querySelector('#error');
       error.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
       error.setAttribute('role', 'alert');

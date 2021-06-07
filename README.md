@@ -32,7 +32,7 @@ In order for ```Weather-App``` to work locally on your machine, you need these i
 2) Run
 
 ```sh
-git clone 
+git clone https://github.com/Ralph-1/Weather-app.git
 ```
 
 3) Run ```cd weather-App``` to enter the main directory

@@ -1,5 +1,5 @@
 export default class UI {
-  constractor() {
+  constructor() {
     this.location = document.getElementById('w-location');
     this.desc = document.getElementById('w-description');
     this.string = document.getElementById('w-string');
@@ -14,7 +14,7 @@ export default class UI {
   content(results){
     this.location.textContent = `${results.name}`;
     this.desc.textContent = `${results.weather[0].description}`;
-    this.string.textContent = `${results.main.temp}°C || ${weather.main.temp * 1.8 + 32}°F`;
+    this.string.textContent = `${results.main.temp}°C `;
     this.icon.setAttribute('src', `http://openweathermap.org/img/wn/${results.weather[0].icon}@2x.png`);
     this.humidity.textContent = `Relative Humidity: ${results.main.humidity}`;
     this.feelsLike.textContent = `Feels Like: ${results.main.feels_like}`;

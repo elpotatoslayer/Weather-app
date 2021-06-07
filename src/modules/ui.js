@@ -11,7 +11,7 @@ export default class UI {
     this.wind = document.getElementById('w-wind');
   }
 
-  content(results){
+  content(results) {
     this.location.textContent = `${results.name}`;
     this.desc.textContent = `${results.weather[0].description}`;
     this.string.textContent = `${results.main.temp}°C / ${results.main.temp * 1.8 + 32}°F`;

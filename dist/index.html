@@ -17,13 +17,27 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
       <a class="navbar-brand" href="#">Weather App</a>
     
-        <form id="search-form" class="form-inline my-2 my-lg-0 d-flex justify-content-between">
+        <form id="w-form" class="form-inline my-2 my-lg-0 d-flex justify-content-between">
           <input class="form-control mr-sm-2" type="search" placeholder="Search for city" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search City</button>
         </form>
       </div>
     </nav>
-    <div class="content"></div>
+
+    <div class="content" class="row">
+      <div class="col-md-6 mx-auto text-center bg-dark text-white mt-5 p-5 rounded">
+        <h1 id="w-location"></h1>
+        <h3 id="w-description"></h3>
+        <h3 id="w-string"></h3>
+        <img id="w-icon">
+        <ul id="w-details" class="list-group mt-3">
+          <li id="w-humidity" class="list-group-item"></li>
+          <li id="w-dewpoint" class="list-group-item"></li>
+          <li id="w-feels-like" class="list-group-item"></li>
+          <li id="w-wind" class="list-group-item"></li>
+        </ul>
+      </div>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -14,7 +14,7 @@ export default class UI {
   content(results){
     this.location.textContent = `${results.name}`;
     this.desc.textContent = `${results.weather[0].description}`;
-    this.string.textContent = `${results.main.temp}°C `;
+    this.string.textContent = `${results.main.temp}°C / ${results.main.temp * 1.8 + 32}°F`;
     this.icon.setAttribute('src', `http://openweathermap.org/img/wn/${results.weather[0].icon}@2x.png`);
     this.humidity.textContent = `Relative Humidity: ${results.main.humidity}`;
     this.feelsLike.textContent = `Feels Like: ${results.main.feels_like}`;

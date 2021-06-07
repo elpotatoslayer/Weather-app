@@ -4,7 +4,7 @@ const weather = new Weather('london');
 
 const getWeather = () => {
   weather.getweather()
-  .then(res => console.log(res))
+  .then(res => ui.content(res))
   .catch(err => err)
 }
 

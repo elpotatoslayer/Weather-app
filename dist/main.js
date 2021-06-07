@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/weather */ \"./src/modules/weather.js\");\n\r\n\r\nconst weather = new _modules_weather__WEBPACK_IMPORTED_MODULE_0__.default('london');\r\n\r\nconst getWeather = () => {\r\n  weather.getweather()\r\n  .then(res => console.log(res))\r\n  .catch(err => err)\r\n}\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', getWeather);\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/weather */ \"./src/modules/weather.js\");\n\r\n\r\nconst weather = new _modules_weather__WEBPACK_IMPORTED_MODULE_0__.default('london');\r\n\r\nconst getWeather = () => {\r\n  weather.getweather()\r\n  .then(res => ui.content(res))\r\n  .catch(err => err)\r\n}\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', getWeather);\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 

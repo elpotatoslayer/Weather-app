@@ -10,21 +10,14 @@ const getWeather = () => {
     .then((res) => {
       ui.content(res);
     })
-    .catch(() => {
-      const h1 = document.getElementById('w-location').textContent;
+    .catch((err) => {
       const error = document.querySelector('#error');
       error.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
       error.setAttribute('role', 'alert');
-      error.textContent = 'SEARCH FOR A VALID CITY OR COUNTRY';
-      const x = document.createElement('BUTTON');
-      x.setAttribute('type', 'button');
-      x.setAttribute('data-dismiss', 'alert');
-      x.setAttribute('class', 'close');
-      x.innerHTML = '&times;';
-      error.appendChild(x);
-      if (!h1 === 'undefined') {
-        error.remove();
-      }
+      error.textContent = err;
+      setTimeout(() =>{
+        error.remove()
+      }, 3000)
     });
 };
 

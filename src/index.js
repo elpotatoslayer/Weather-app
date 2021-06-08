@@ -11,6 +11,9 @@ const getWeather = () => {
       ui.content(res);
     })
     .catch(() => {
+    
+
+      const h1 = document.getElementById('w-location').textContent;
       const error = document.querySelector('#error');
       error.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
       error.setAttribute('role', 'alert');
@@ -21,6 +24,9 @@ const getWeather = () => {
       x.setAttribute('class', 'close');
       x.innerHTML = '&times;';
       error.appendChild(x);
+      if (!h1 === 'undefined') {
+         error.remove();
+      }
     });
 };
 

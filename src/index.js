@@ -15,9 +15,9 @@ const getWeather = () => {
       error.setAttribute('class', 'alert alert-danger alert-dismissible fade show');
       error.setAttribute('role', 'alert');
       error.textContent = err;
-      setTimeout(() =>{
-        error.remove()
-      }, 3000)
+      setTimeout(() => {
+        error.remove();
+      }, 3000);
     });
 };
 

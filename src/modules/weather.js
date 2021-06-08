@@ -7,8 +7,8 @@ export default class Weather {
   async getweather() {
     const responseData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${this.api}`);
 
-    if(responseData.status !== 200) {
-      throw new Error('Enter Valid city name.')
+    if (responseData.status !== 200) {
+      throw new Error('Enter Valid city name.');
     }
 
     const response = await responseData.json();

@@ -16,10 +16,10 @@ export default class UI {
     this.desc.textContent = `${results.weather[0].description}`;
     this.string.textContent = document.querySelector('#temp-btn').addEventListener('click', () => {
       const x = document.getElementById('w-string');
-      if (x.innerHTML === `${results.main.temp}°C`) {
-        x.innerText = `${results.main.temp * 1.8 + 32}°F`;
-      } else {
+      if (document.getElementById('temp-btn').checked) {
         x.innerHTML = `${results.main.temp}°C`;
+      } else {
+        x.innerText = `${results.main.temp * 1.8 + 32}°F`;
       }
     });
     this.icon.setAttribute('src', `http://openweathermap.org/img/wn/${results.weather[0].icon}@2x.png`);

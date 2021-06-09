@@ -12,7 +12,8 @@ const getWeather = () => {
       ui.content(res);
      const temp = document.getElementById('w-string');
       const x = (temp) => {
-        temp.innerHTML = `${res.main.temp}°C`;
+        const tempC = parseFloat(res.main.temp).toFixed(1);
+        temp.innerHTML = `${tempC}°C`;
       }
       x(temp);
     })

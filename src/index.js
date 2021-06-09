@@ -10,11 +10,11 @@ const getWeather = () => {
   weather.getweather()
     .then((res) => {
       ui.content(res);
-     const temp = document.getElementById('w-string');
+      const temp = document.getElementById('w-string');
       const x = (temp) => {
         const tempC = parseFloat(res.main.temp).toFixed(1);
         temp.innerHTML = `${tempC}°C`;
-      }
+      };
       x(temp);
     })
     .catch((err) => {
@@ -37,4 +37,15 @@ document.getElementById('search').addEventListener('click', (e) => {
   weather.changeLocation(city);
 
   getWeather();
+
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i += 1) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  document.querySelector('body').style.backgroundColor = getRandomColor();
 });

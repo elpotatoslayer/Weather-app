@@ -10,6 +10,11 @@ const getWeather = () => {
   weather.getweather()
     .then((res) => {
       ui.content(res);
+     const temp = document.getElementById('w-string');
+      const x = (temp) => {
+        temp.innerHTML = `${res.main.temp}°C`;
+      }
+      x(temp);
     })
     .catch((err) => {
       const error = document.querySelector('#error');

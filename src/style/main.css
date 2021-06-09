@@ -1,5 +1,8 @@
 body {
   background-color: #ddd;
+  background-repeat:no-repeat;
+  overflow-x: hidden;
+  background-size: auto;
 }
 
 .switch {
